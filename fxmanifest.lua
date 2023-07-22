@@ -22,6 +22,7 @@ server_scripts {
 
 dependencies {
     'qb-core',
+    -- 'qb-target', -- Uncomment for QB Target
     'ox_target',
     'ox_lib'
 }
