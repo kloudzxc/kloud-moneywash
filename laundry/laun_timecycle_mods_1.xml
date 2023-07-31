@@ -1,0 +1,37 @@
+<timecycle_modifier_data version="1.000000">
+<modifier name="v_laund_rm" numMods="77" userFlags="0">
+    <light_artificial_int_down_col_r>0.875 1.000</light_artificial_int_down_col_r>
+    <light_artificial_int_down_col_g>0.910 1.000</light_artificial_int_down_col_g>
+    <light_artificial_int_down_col_b>0.890 1.000</light_artificial_int_down_col_b>
+    <light_artificial_int_down_intensity>0.200 0.000</light_artificial_int_down_intensity>
+    <light_artificial_int_up_col_r>0.871 1.000</light_artificial_int_up_col_r>
+    <light_artificial_int_up_col_g>0.820 1.000</light_artificial_int_up_col_g>
+    <light_artificial_int_up_col_b>0.757 1.000</light_artificial_int_up_col_b>
+    <light_artificial_int_up_intensity>0.200 0.000</light_artificial_int_up_intensity>
+    <ped_light_col_r>1.000 1.000</ped_light_col_r>
+    <ped_light_col_g>0.718 1.000</ped_light_col_g>
+    <ped_light_col_b>0.502 1.000</ped_light_col_b>
+    <ped_light_mult>0.100 1.000</ped_light_mult>
+	<ssao_inten>5.000 0.000</ssao_inten>
+    <postfx_exposure>-0.900 0.000</postfx_exposure>
+    <postfx_bright_pass_thresh_width>0.500 0.000</postfx_bright_pass_thresh_width>
+    <postfx_bright_pass_thresh>0.500 0.000</postfx_bright_pass_thresh>
+    <postfx_intensity_bloom>0.350 0.000</postfx_intensity_bloom>
+    <dir_shadow_num_cascades>3.000 0.000</dir_shadow_num_cascades>
+    <fog_start>73.000 73.000</fog_start>
+    <reflection_lod_range_start>0.000 0.000</reflection_lod_range_start>
+    <reflection_lod_range_end>55.000 0.000</reflection_lod_range_end>
+    <reflection_slod_range_start>55.000 0.000</reflection_slod_range_start>
+    <reflection_slod_range_end>65.000 0.000</reflection_slod_range_end>
+    <reflection_tweak_interior_amb>15.000 0.000</reflection_tweak_interior_amb>
+    <temperature>20.000 0.000</temperature>
+    <natural_ambient_multiplier>0.150 0.000</natural_ambient_multiplier>
+    <artificial_int_ambient_multiplier>1.000 0.000</artificial_int_ambient_multiplier>
+    <lod_mult_hd>0.700 0.000</lod_mult_hd>
+    <lod_mult_lod>0.700 0.000</lod_mult_lod>
+    <lod_mult_slod1>0.700 0.000</lod_mult_slod1>
+    <lod_mult_slod2>0.800 0.800</lod_mult_slod2>
+    <lod_mult_slod3>0.700 0.000</lod_mult_slod3>
+    <lod_mult_slod4>0.700 0.000</lod_mult_slod4>
+  </modifier>
+</timecycle_modifier_data>
