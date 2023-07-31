@@ -1,5 +1,11 @@
 # kloud-moneywash
- QBCore Configurable Moneywash
+ QBCore/ESX Configurable Moneywash
+
+# Requirements
+- ox_lib https://github.com/overextended/ox_lib
+- rpemotes https://github.com/TayMcKenzieNZ/rpemotes
+- ox_target https://github.com/overextended/ox_target or qb-target https://github.com/qbcore-framework/qb-target
+- qb-core / es_extended
 
 # Installation
 - Take the "laundry" folder outside the kloud-moneywash folder. It is the MLO used in the preview. 
@@ -18,5 +24,5 @@
 # TO-DO
 - Add option to change skill check
 - Add option to change progress bar/circle
-- Add ESX compatibility
+- --Add ESX compatibility-- (Needs Testing)
 

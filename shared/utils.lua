@@ -30,6 +30,8 @@ Notify = function (msg, type)
         end
     elseif Wash.Notify == "qb" then
         TriggerEvent('QBCore:Notify', msg, type)
+    elseif Wash.Notify == "esx" then
+        TriggerEvent('esx:showNotification', msg, type)
     end
 end
 
@@ -53,7 +55,9 @@ SVNotify = function (source, msg, type)
             })
         end
     elseif Wash.Notify == "qb" then
-        TriggerClientEvent('QBCore:Notify', msg, type)
+        TriggerClientEvent('QBCore:Notify', source, msg, type)
+    elseif Wash.Notify == "esx" then
+        TriggerClientEvent('esx:showNotification', source, msg, type)
     end
 end
 
@@ -88,6 +92,48 @@ AddTarget = function (name, coords, radius, infos, options, distance)
             debug = Wash.Debug,
             drawSprite = true,
             options = options
+        })
+    end
+end
+
+SkillCheck = function (diff)
+    if Wash.SkillCheck == "ox" then
+        return lib.skillCheck(diff, {'w', 'a', 's', 'd'})
+    end
+end
+
+Progress = function (duration, label, dict, clip)
+    if Wash.Progress == "circle" then
+        return lib.progressCircle({
+            duration = duration,
+            label = label,
+            useWhileDead = false,
+            canCancel = true,
+            disable = {
+                move = true,
+                car = true,
+                combat = true,
+                mouse = false
+            },
+            anim = {
+                dict = dict,
+                clip = clip
+            },
+    
+        })
+    elseif Wash.Progress == "bar" then
+        return lib.progressBar({
+            duration = duration,
+            label = label,
+            useWhileDead = false,
+            canCancel = true,
+            disable = {
+                car = true,
+            },
+            anim = {
+                dict = dict,
+                clip = clip
+            }
         })
     end
 end

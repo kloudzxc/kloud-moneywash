@@ -17,12 +17,12 @@ client_scripts {
 
 server_scripts {
     '@oxmysql/lib/MySQL.lua',
-    'server/*.lua'
+    'server/*.lua',
+    'inventory/*.lua',
+    'bridge/*.lua'
 }
 
 dependencies {
-    'qb-core',
-    -- 'qb-target', -- Uncomment for QB Target
-    'ox_target',
+    'rpemotes',
     'ox_lib'
 }

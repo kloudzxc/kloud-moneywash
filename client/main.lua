@@ -53,9 +53,9 @@ OpenWash = function ()
     SetEntityHeading(cache.ped, 99.66)
     exports["rpemotes"]:EmoteCommandStart('mechanic2')
 
-    if not lib.skillCheck({'medium', 'medium', 'medium', 'easy'}, {'w', 'a', 's', 'd'}) then 
-        Notify('Failed', 'error') 
+    if not SkillCheck({'medium', 'medium', 'medium', 'easy'}) then
         isBusy = false 
+        Notify('Failed', 'error')
         exports["rpemotes"]:EmoteCancel(true)
         if inZone then
             DrawText('[E] Wash Money')
@@ -73,23 +73,7 @@ OpenWash = function ()
         duration = Wash.Duration * 1000
     end
 
-    if lib.progressCircle({
-        duration = duration,
-        label = "Washing Money",
-        useWhileDead = false,
-        canCancel = true,
-        disable = {
-            move = true,
-            car = true,
-            combat = true,
-            mouse = false
-        },
-        anim = {
-            dict = Wash.Animation.dict,
-            clip = Wash.Animation.clip
-        },
-
-    }) then
+    if Progress(duration, "Washing Money", Wash.Animation.dict, Wash.Animation.clip) then
         isBusy = false
         TriggerServerEvent('kloud-moneywash:server:success')
         if inZone then
