@@ -23,6 +23,6 @@
 
 # TO-DO
 - Add option to change skill check
-- Add option to change progress bar/circle
-- --Add ESX compatibility-- (Needs Testing)
+- ~~Add option to change progress bar/circle~~
+- ~~Add ESX compatibility~~ (Needs Testing)
 
