@@ -20,6 +20,7 @@
 - Clean Animation
 - Easily Add Locations
 - Compatible with ox_inventory / qb-inventory (not tested)
+- Discord Webhook Log
 
 # TO-DO
 - Add option to change skill check

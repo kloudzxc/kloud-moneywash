@@ -8,6 +8,7 @@ Wash.Target = 'ox' -- / 'ox', 'qb' / -- for Wash.Type = 'target'
 Wash.Inventory = 'ox' -- / 'ox', 'qb'
 Wash.Progress = 'circle' -- / 'bar', 'circle' / -- ox_lib's
 Wash.SkillCheck = 'ox' -- / WIP
+Wash.Log = true -- Disord Log / Change Webhook in server/main.lua
 Wash.Ban = false
 
 Wash.QBDrawAlignment = 'top' -- / 'left', 'top', 'right' -- / For QB DrawText

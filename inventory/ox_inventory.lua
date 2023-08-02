@@ -22,6 +22,7 @@ RegisterNetEvent('kloud-moneywash:server:success', function()
     local src = source
     local itemName = Wash.Item
     local Player = GetPlayer(src)
+    local PlayerName = GetPlayerName(src)
     
     local itemWorth = 0
     local itemAmount = 0
@@ -39,7 +40,8 @@ RegisterNetEvent('kloud-moneywash:server:success', function()
                 
                 AddMoney(src, 'cash', math.floor(itemWorth * Wash.Tax))
                 SVNotify(src, 'You\'ve successfully washed $'..math.floor(itemWorth * Wash.Tax), 'success')
-                
+                LogWash(src, itemName, itemAmount, math.floor(itemWorth * Wash.Tax))
+
             elseif not data.metadata.worth and not Wash.Metadata then
                 itemAmount = itemAmount + data.count
                 itemWorth = itemWorth + (100 * itemAmount)
@@ -48,6 +50,7 @@ RegisterNetEvent('kloud-moneywash:server:success', function()
                 
                 AddMoney(src, 'cash', math.floor(itemWorth * Wash.Tax))
                 SVNotify(src, 'You\'ve successfully washed $'..math.floor(itemWorth * Wash.Tax), 'success')
+                LogWash(src, itemName, itemAmount, math.floor(itemWorth * Wash.Tax))
             else
                 Ban(src, 'Attempted Exploit!')
             end

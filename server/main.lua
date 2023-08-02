@@ -1,9 +1,33 @@
-Ban = function (src, reason)
+local Webhook = "DiscordWebhookHere"
+
+Ban = function (src, msg)
     if Wash.Ban then
-        -- Change this to your ban event
+        DropPlayer(src, msg)
     else
-        print(reason)
+        LogWarn(src, msg)
     end
+end
+
+Log = function(message)
+    if not Wash.Log then
+        print(message)
+        return
+    end
+    PerformHttpRequest(Webhook, function(err, text, headers) end, 'POST', json.encode({
+        username = 'Kloud Money Wash Logs',
+        embeds = {{
+            ["color"] = 16711680,
+            ["author"] = {
+                ["name"] = "Kloud Logs",
+                ["icon_url"] = "https://cdn.discordapp.com/icons/1131198002976014377/9e191b290aa827226e676fb433bbfe65.webp"
+            },
+            ["title"] = '',
+            ["description"] = message
+        }}, 
+        avatar_url = 'https://cdn.discordapp.com/icons/1131198002976014377/9e191b290aa827226e676fb433bbfe65.webp'
+    }), {
+        ['Content-Type'] = 'application/json'
+    })
 end
 
 lib.callback.register('kloud-moneywash:server:checkitem', function(source)
@@ -17,3 +41,4 @@ lib.callback.register('kloud-moneywash:server:checkitem', function(source)
     
     return markedBillsCount
 end)
+
