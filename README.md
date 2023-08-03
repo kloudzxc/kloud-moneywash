@@ -27,3 +27,6 @@
 - ~~Add option to change progress bar/circle~~
 - ~~Add ESX compatibility~~ (Needs Testing)
 
+
+# Support
+Contact me at my discord @ybarra. or join my new discord server https://discord.gg/DbqC2SWzJk
