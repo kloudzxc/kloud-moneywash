@@ -1,5 +1,5 @@
 # kloud-moneywash
- QBCore/ESX Configurable Moneywash
+Advanced Money Wash Script for QB & ESX
 
 # Requirements
 - ox_lib https://github.com/overextended/ox_lib
