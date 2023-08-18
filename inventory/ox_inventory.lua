@@ -39,7 +39,7 @@ RegisterNetEvent('kloud-moneywash:server:success', function()
                 if not RemoveItem(src, itemName, itemAmount) then Ban(src, 'Attempted Exploit!') return end
                 
                 AddMoney(src, 'cash', math.floor(itemWorth * Wash.Tax))
-                SVNotify(src, 'You\'ve successfully washed $'..math.floor(itemWorth * Wash.Tax), 'success')
+                SVNotify(src, locale('wash_success', math.floor(itemWorth * Wash.Tax)), 'success')
                 LogWash(src, itemName, itemAmount, math.floor(itemWorth * Wash.Tax))
 
             elseif not data.metadata.worth and not Wash.Metadata then
@@ -49,7 +49,7 @@ RegisterNetEvent('kloud-moneywash:server:success', function()
                 if not RemoveItem(src, itemName, data.count) then Ban(src, 'Attempted Exploit!') return end
                 
                 AddMoney(src, 'cash', math.floor(itemWorth * Wash.Tax))
-                SVNotify(src, 'You\'ve successfully washed $'..math.floor(itemWorth * Wash.Tax), 'success')
+                SVNotify(src, locale('wash_success', math.floor(itemWorth * Wash.Tax)), 'success')
                 LogWash(src, itemName, itemAmount, math.floor(itemWorth * Wash.Tax))
             else
                 Ban(src, 'Attempted Exploit!')

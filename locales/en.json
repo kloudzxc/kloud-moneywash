@@ -1,0 +1,9 @@
+{
+    "currency":"$",
+    "worth":"Worth",
+    "wash_money":"Wash Money",
+    "txt_wash_money":"[%s] Wash Money",
+    "no_marked_bills":"You don't have marked bills",
+    "washing_money":"Washing Money",
+    "wash_success":"You've successfully washed ${currency}%s"
+}

@@ -1,6 +1,8 @@
 local inZone = false
 local isBusy = false
 
+lib.locale()
+
 Targets = function ()
     for _,v in pairs(Wash.Locations) do
         AddTarget('kloud-moneywash', v, 0.55, {
@@ -9,7 +11,7 @@ Targets = function ()
         }, {
             {
                 event = 'kloud-moneywash:client:openwash',
-                label = "Wash Money",
+                label = locale('wash_money'),
                 name = "kloud-moneywash",
                 icon = "fas fa-jug-detergent",
                 distance = 1,
@@ -25,7 +27,7 @@ Zones = function ()
             debug = Wash.Debug,
             onEnter = function ()
                 inZone = true
-                DrawText('[E] Wash Money')
+                DrawText(locale('txt_wash_money', 'E'))
             end,
             onExit = function ()
                 inZone = false
@@ -47,7 +49,7 @@ end
 OpenWash = function ()
     local markedBills = lib.callback.await('kloud-moneywash:server:checkitem', false)
 
-    if markedBills < 1 then Notify('You don\'t have marked bills.', 'error') return end
+    if markedBills < 1 then Notify(locale('no_marked_bills'), 'error') return end
 
     isBusy = true
     SetEntityHeading(cache.ped, 99.66)
@@ -58,7 +60,7 @@ OpenWash = function ()
         Notify('Failed', 'error')
         exports["rpemotes"]:EmoteCancel(true)
         if inZone then
-            DrawText('[E] Wash Money')
+            DrawText(locale('txt_wash_money', "E"))
         end
 
         return 
@@ -73,17 +75,17 @@ OpenWash = function ()
         duration = Wash.Duration * 1000
     end
 
-    if Progress(duration, "Washing Money", Wash.Animation.dict, Wash.Animation.clip) then
+    if Progress(duration, locale('washing_money'), Wash.Animation.dict, Wash.Animation.clip) then
         isBusy = false
         TriggerServerEvent('kloud-moneywash:server:success')
         if inZone then
-            DrawText('[E] Wash Money')
+            DrawText(locale("txt_wash_money", 'E'))
         end
     else
         isBusy = false
         Notify('Wash Cancelled', 'error')
         if inZone then
-            DrawText('[E] Wash Money')
+            DrawText(locale("txt_wash_money", 'E'))
         end
     end
 end

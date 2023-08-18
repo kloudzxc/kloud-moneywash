@@ -5,6 +5,8 @@ lua54 'yes'
 author 'kloud'
 description 'Simple moneywash script for QBCore'
 
+version '1.1.0'
+
 
 shared_scripts {
     '@ox_lib/init.lua',
@@ -19,6 +21,10 @@ server_scripts {
     'server/*.lua',
     'inventory/*.lua',
     'bridge/*.lua'
+}
+
+files {
+    'locales/*.json'
 }
 
 dependencies {

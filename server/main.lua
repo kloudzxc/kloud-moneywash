@@ -1,5 +1,7 @@
 local Webhook = "DiscordWebhookHere"
 
+lib.locale()
+
 Ban = function (src, msg)
     if Wash.Ban then
         DropPlayer(src, msg)
