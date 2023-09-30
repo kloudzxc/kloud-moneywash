@@ -5,7 +5,7 @@ lua54 'yes'
 author 'kloud'
 description 'Simple moneywash script for QBCore'
 
-version '1.1.0'
+version '1.1.1'
 
 
 shared_scripts {

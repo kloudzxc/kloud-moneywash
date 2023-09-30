@@ -6,8 +6,10 @@ AddMoney = function (src, type, amount)
     if type == "cash" then
         type = "money"
     end
+    
+    Player.addAccountMoney(type, amount)
 
-    return Player.addAccountMoney(type, amount)
+    return true
 end
 
 GetPlayer = function (src)

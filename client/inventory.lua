@@ -18,3 +18,9 @@ elseif GetResourceState('es_extended') == 'started' then
         end
     end)
 end
+
+AddEventHandler("onResourceStart", function(name)
+    if GetCurrentResourceName() ~= name then return end
+
+    exports.ox_inventory:displayMetadata('worth', 'Worth')
+end)
